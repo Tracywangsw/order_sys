@@ -1,0 +1,24 @@
+<import type="css" file="style/user/mylist"/>
+<import type="js" file="js/user/mylist"/>
+<div>
+	<div><div>
+	<div class="mylist_div">
+		<ul class="mylist_top">
+			<li><a href="todaylist" id="todaylist">今日订单</a></li>
+			<li><a href="mylist">全部订单</a></li>
+			<li><a href="../Menu/all">继续点菜</a></li>
+		</ul>
+		<div class="mylist_note">温馨提示：正在做的菜（状态为on-doing）和已经做好的菜（状态为done）不能退订</div>
+		<if condition="$p eq 1">
+			<table class="mylist_table">
+				<tr><th>菜名</th><th>数量</th><th>价格</th><th>订单时间</th><th>状态</th><th>退订</th></tr>
+				<volist name="menuList" id="vo">
+					<tr class="mylist_tr"><td>{$vo.menu}</td><td>{$vo.amount}</td><td>{$vo.price}</td><td>{$vo.time}</td><td>{$vo.state}</td><td><a href="back?id={$vo.id}" sign="{$vo.id}" class="mylist_back">我要退订</a></td></tr>
+				</volist>
+				<tr><td>总计</td><td id="sum_count">{$sum_count}</td><td id="sum_price">{$sum_price}</td><td></td><td></td><td></td></tr>
+			</table>
+			<else /><div class="mylist_top">暂无订单</div>
+		</if>
+
+	</div>
+</div>

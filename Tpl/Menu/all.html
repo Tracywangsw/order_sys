@@ -1,0 +1,54 @@
+<layout name='layout' />
+<title>点菜--首页</title>
+<import type="css" file="style/menu/all"/>
+<import type="js" file="js/menu/all"/>
+<include file="Layout:menu_kind"/>
+<div class="fp_content">
+	<h2 class="all_title">推荐热门菜～</h2>
+	<div class="all_menu">
+		<div class="all_row">
+			<volist name="list" id="vo" offset="0" length='4'>
+				<div class="all_list">
+					<div class="all_pic">{$vo.pic_url}</div>
+					<div class="all_name">{$vo.name}</div>
+					<div class="all_order_btn"><input type="button" value="加入订单" class="fp_listBtn"/></div>
+				</div>
+			</volist>
+		</div>
+		<div class="all_row">
+			<volist name="list" id="vo" offset="4" length='4'>
+				<div class="all_list">
+					<div class="all_pic">{$vo.pic_url}</div>
+					<div class="all_name">{$vo.name}</div>
+					<div class="all_order_btn"><input type="button" value="加入订单" class="fp_listBtn"/></div>
+				</div>
+			</volist>
+		</div>
+		<div class="all_row">
+			<volist name="list" id="vo" offset="8" length='4'>
+				<div class="all_list">
+					<div class="all_pic">{$vo.pic_url}</div>
+					<div class="all_name">{$vo.name}</div>
+					<div class="all_order_btn"><input type="button" value="加入订单" class="fp_listBtn"/></div>
+				</div>
+			</volist>
+		</div>
+	</div>
+	<div class="all_page"><a href="?p={$pre_page}">前一页</a> 第{$cur_page}/{$page} <a href="?p={$next_page}">后一页</a></div>
+</div>
+<div class="fp_right">
+	<div>
+		<div>请输入你的桌子号</div>
+		<select name="number[]" muitiple="multiple" id="select_desk">
+			<option value="0">请选择一个桌子号</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+		</select>
+	</div>
+</div>

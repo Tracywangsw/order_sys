@@ -1,0 +1,74 @@
+*
+{
+	margin:0;
+	padding:0;
+}
+a
+{
+	text-decoration:none;
+	color:black;
+}
+ul
+{
+	list-style:none;
+}
+.fp_top
+{
+	height:50px;
+	line-height:50px;
+	background:blue;
+}
+.fp_center
+{
+	margin:0 auto;
+	width:980px;
+}
+.fp_left
+{
+	height:300px;
+	margin-right:50px;
+	float:left;
+}
+.fp_right
+{
+	margin-top:20px;
+	float:right;
+}
+.fp_com
+{
+	margin:0 auto;
+	width:980px;
+}
+.fp_title
+{
+	width:70%;
+	float:left;
+}
+.fp_logout
+{
+	float:right;
+}
+.fp_login
+{
+	float:left;
+	margin-right:10px;
+}
+.fp_regsiter
+{
+	float:left;
+	margin-right:10px;
+}
+.fp_kind
+{
+	line-height:70px;
+}
+.fp_content
+{
+	float:left;
+	padding:20px 30px;
+}
+.fp_exit
+{
+	float:left;
+	margin-right:10px;
+}

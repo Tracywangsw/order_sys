@@ -1,0 +1,67 @@
+<import type="css" file="style/user/mylist"/>
+<import type="css" file="style/user/mangelist"/>
+<import type="js" file="js/user/mangelist"/>
+<div>
+	<div><div>
+	<div class="mylist_div">
+		<ul class="mylist_top">
+			<li><a href="mangelist">今日订单</a></li>
+			<li><a href="totalist">全部订单</a></li>
+			<li><a href="selectlist" id="selectlist">查询订单</a></li>
+		</ul>
+		<eq name="r" value="1">
+			<form method="post" action="selecthandler" class="mangelist_form">
+				<table class="mangelist_table">
+					<tr><th>查询选项</th><th>桌子号</th><th>菜名</th><th>状态</th></tr>
+					<tr>
+						<td>查询内容</td>
+						<td>
+							<select name="desk_id" muitiple="multiple" id="select_desk">
+								<option value="">请选择一个桌子号</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+							</select>
+						</td>
+						<td><input type="text" value="请输入菜名" name="menu" id="select_menu" class="select_input"/></td>
+						<td>
+							<select name="state" muitiple="multiple" id="select_state">
+								<option value="">请选择所点菜的状态</option>
+								<option value="not ready">not ready</option>
+								<option value="on-doing">on-doing</option>
+								<option value="done">done</option>
+							</select>
+						</td>
+						<td><input type="submit" id="select_a" value="查询"/></td>
+					</tr>
+				</table>
+			</form>
+		</eq>
+		<if condition="$p eq 1">
+			<table class="mylist_table">
+				<tr><th>用户</th><th>桌子号</th><th>菜名</th><th>数量</th><th>价格</th><th>订单时间</th><th>状态</th>
+					<th id="change_th">
+						<select name="change_state" muitiple="multiple" id="change_state">
+							<option value="">请修改所点菜的状态</option>
+							<option value="not ready">not ready</option>
+							<option value="on-doing">on-doing</option>
+							<option value="done">done</option>
+						</select>
+					</th>
+				</tr>
+				<volist name="menuList" id="vo">
+					<tr class="mylist_tr"><td>{$vo.user}</td><td>{$vo.desk_id}</td><td>{$vo.menu}</td><td>{$vo.amount}</td><td>{$vo.price}</td><td>{$vo.time}</td><td>{$vo.state}</td><td class="change_td">（选中就可修改）<input type="checkbox" value="{$vo.id}" class="change_checkbox"/></td></tr>
+				</volist>
+				<tr><td>总计</td><td></td><td></td><td id="sum_count">{$sum_count}</td><td id="sum_price">{$sum_price}</td><td></td><td></td><td><input type="button" id="confirm_change" value="确认修改"/></td></tr>
+			</table>
+			<elseif condition="$p eq 2"/><div class="mylist_top">暂无订单</div>
+			<else/>
+		</if>
+
+	</div>
+</div>

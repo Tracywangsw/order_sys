@@ -1,0 +1,24 @@
+.mangelist_table
+{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse:collapse;
+}
+.mangelist_table td
+{
+	font-size:1em;
+	padding:3px 7px 2px 7px;
+}
+.mangelist_table th
+{
+	text-align:left;
+	padding:7px;
+}
+.select_input
+{
+	color:#ccc;
+	font-size:12px;
+}
+.mangelist_form
+{
+	margin-bottom:20px;
+}

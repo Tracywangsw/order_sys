@@ -1,0 +1,21 @@
+.rg_frame
+{
+	padding:30px;
+}
+.rg_word
+{
+	margin:20px 0;
+}
+.rg_table
+{
+	margin:10px;
+}
+.rg_table td
+{
+	padding:10px;
+}
+.log_error
+{
+	padding:0 20px;
+	color:green;
+}

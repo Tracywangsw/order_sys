@@ -1,0 +1,32 @@
+.all_menu
+{
+	padding:10px 20px;
+	background:#ccc;
+}
+.all_pic
+{
+	width:100px;
+	height:100px;
+	background:#999;
+	padding:5px;
+}
+.all_list
+{
+	float:left;
+	margin-right:30px;
+}
+.all_row
+{
+	width:600px;
+	height:200px;
+	margin-bottom:20px;
+}
+.all_title
+{
+	text-align:center;
+}
+.all_page
+{
+	padding:10px;
+	float:right;
+}
